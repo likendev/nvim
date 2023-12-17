@@ -12,9 +12,6 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Set colorscheme
-vim.cmd.colorscheme 'catppuccin'
-
 -- Set leader
 vim.g.mapleader = ' '
 
