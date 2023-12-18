@@ -1,5 +1,6 @@
 -- Keymaps for better default experience
 -- See `:help vim.keymap.set()`
+vim.g.mapleader = ' '
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
 -- Remap for dealing with word wrap
@@ -14,3 +15,4 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 
 -- Remap :Ex
 vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)
+
