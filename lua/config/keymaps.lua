@@ -16,3 +16,5 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 -- Remap :Ex
 vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)
 
+-- When pasting, do not replace clipboard
+vim.keymap.set('x', 'p', [["_dP]])
