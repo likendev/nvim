@@ -21,12 +21,25 @@ return {
 		end,
 	},
 	{
+		{
+			"j-hui/fidget.nvim",
+			opts = {},
+		},
+	},
+	{
 		"neovim/nvim-lspconfig",
 		config = function()
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 			local lspconfig = require("lspconfig")
 			lspconfig.lua_ls.setup({
+				settings = {
+					Lua = {
+						completion = {
+							callSnippet = "Replace"
+						}
+					}
+				},
 				capabilities = capabilities,
 			})
 			lspconfig.elixirls.setup({
