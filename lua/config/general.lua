@@ -27,7 +27,7 @@ vim.o.mouse = "a"
 
 -- Decrease update time
 vim.o.updatetime = 250
-vim.o.timeoutlen = 700
+vim.o.timeoutlen = 300
 
 vim.o.completeopt = "menuone,noselect"
 
