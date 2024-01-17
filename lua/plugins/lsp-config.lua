@@ -28,6 +28,12 @@ return {
 	},
 	{
 		"neovim/nvim-lspconfig",
+		dependencies = {
+			{
+				"folke/neodev.nvim",
+				opts = {},
+			},
+		},
 		config = function()
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
@@ -36,9 +42,9 @@ return {
 				settings = {
 					Lua = {
 						completion = {
-							callSnippet = "Replace"
-						}
-					}
+							callSnippet = "Replace",
+						},
+					},
 				},
 				capabilities = capabilities,
 			})
@@ -64,6 +70,7 @@ return {
 			vim.keymap.set("n", "gr", vim.lsp.buf.references, {})
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
+			vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, { desc = "Signature Documentation" })
 		end,
 	},
 }
