@@ -14,6 +14,7 @@ return {
                     "elixirls",
                     "rust_analyzer",
                     "tsserver",
+                    "tailwindcss",
                     "svelte",
                     "zls",
                 },
@@ -68,6 +69,9 @@ return {
                 capabilities = capabilities,
             })
             lspconfig.zls.setup({
+                capabilities = capabilities,
+            })
+            lspconfig.tailwindcss.setup({
                 capabilities = capabilities,
             })
 
