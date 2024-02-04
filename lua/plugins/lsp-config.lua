@@ -50,6 +50,7 @@ return {
 			})
 			lspconfig.elixirls.setup({
 				capabilities = capabilities,
+				cmd = { "/home/likendev/.config/elixir_ls/language_server.sh" }
 			})
 			lspconfig.rust_analyzer.setup({
 				capabilities = capabilities,
